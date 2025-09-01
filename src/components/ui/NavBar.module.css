@@ -15,3 +15,31 @@
 .nav-title {
   @apply text-xl font-bold text-gray-700;
 }
+
+.nav-desktop-links {
+  @apply hidden md:flex items-center space-x-6 text-gray-700;
+}
+
+.nav-desktop-links a {
+  @apply hover:text-blue-600;
+}
+
+.mobile-menu-button-wrapper {
+  @apply md:hidden flex items-center;
+} 
+
+.mobile-menu-button {
+  @apply text-gray-700 hover:text-blue-600;
+}
+
+.mobile-dropdown {
+  @apply md:hidden bg-white shadow-md;
+}
+
+.mobile-dropdown-inner {
+  @apply px-4 pt-2 pb-3 space-y-2 text-gray-700;
+}
+
+.mobile-dropdown-inner a {
+  @apply block hover:text-blue-600
+}
