@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.footer-outer {
+  @apply shadow-md w-full z-10 bg-[var(--color-header-footer-background)] text-[var(--color-header-footer-foreground)];
+}
+
+.footer-inner {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center;
+}

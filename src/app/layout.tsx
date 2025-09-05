@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-import NavBar from "../components/ui/NavBar";
+import NavBar from "../components/ui/Header";
+import Footer from "../components/ui/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -27,10 +28,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${robotoMono.variable} antialiased`}
+        className={`${roboto.variable} ${robotoMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <NavBar />
-        {children}
+        <header>
+          <NavBar />
+        </header>
+        <main className="flex-grow">
+          <div className="max-w-7xl mx-auto p-4 sm:px-6 lg:px-8">
+            {children}
+          </div>
+        </main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

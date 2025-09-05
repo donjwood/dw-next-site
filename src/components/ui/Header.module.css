@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .navbar-outer {
-  @apply bg-white shadow-md w-full z-10;
+  @apply shadow-md w-full z-10 bg-[var(--color-header-footer-background)] text-[var(--color-header-footer-foreground)];
 }
 
 .navbar-inner{
@@ -13,11 +13,11 @@
 }
 
 .nav-title {
-  @apply text-xl font-bold text-gray-700;
+  @apply text-xl font-bold;
 }
 
 .nav-desktop-links {
-  @apply hidden md:flex items-center space-x-6 text-gray-700;
+  @apply hidden md:flex items-center space-x-6;
 }
 
 .nav-desktop-links a {
@@ -29,15 +29,15 @@
 } 
 
 .mobile-menu-button {
-  @apply text-gray-700 hover:text-blue-600;
+  @apply hover:text-blue-600;
 }
 
 .mobile-dropdown {
-  @apply md:hidden bg-white shadow-md;
+  @apply md:hidden shadow-md;
 }
 
 .mobile-dropdown-inner {
-  @apply px-4 pt-2 pb-3 space-y-2 text-gray-700;
+  @apply px-4 pt-2 pb-3 space-y-2;
 }
 
 .mobile-dropdown-inner a {
