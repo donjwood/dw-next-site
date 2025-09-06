@@ -5,7 +5,11 @@
 }
 
 .navbar-inner{
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16;
+  @apply flex justify-between h-16;
+}
+
+.navbar-inner a {
+  @apply text-[var(--color-header-footer-foreground)] no-underline;
 }
 
 .nav-header {
@@ -18,10 +22,6 @@
 
 .nav-desktop-links {
   @apply hidden md:flex items-center space-x-6;
-}
-
-.nav-desktop-links a {
-  @apply hover:text-blue-600;
 }
 
 .mobile-menu-button-wrapper {
@@ -41,5 +41,5 @@
 }
 
 .mobile-dropdown-inner a {
-  @apply block hover:text-blue-600
+  @apply block;;
 }

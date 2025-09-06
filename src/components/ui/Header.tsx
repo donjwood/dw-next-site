@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import clsx from "clsx";
 
 import styles from "./Header.module.css";
 
@@ -10,17 +12,16 @@ export default function NavBar() {
 
   return (
     <nav className={styles["navbar-outer"]}>
-      <div className={styles["navbar-inner"]}>
+      <div className={clsx(styles["navbar-inner"], "container")}>
         <div className={styles["nav-header"]}>
           <a href="/" className={styles["nav-title"]}>
             DJW
           </a>
         </div>
         <div className={styles["nav-desktop-links"]}>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/blog">Blog</Link>
         </div>
 
         <div className={styles["mobile-menu-button-wrapper"]}>
@@ -37,10 +38,9 @@ export default function NavBar() {
       {isOpen && (
         <div className={styles["mobile-dropdown"]}>
           <div className={styles["mobile-dropdown-inner"]}>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/blog">Blog</Link>
           </div>
         </div>
       )}

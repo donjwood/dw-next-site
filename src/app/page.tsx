@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
    <>
-   jdklsfj
+   <h1>DJW Website</h1>
    </>
   );
 }
