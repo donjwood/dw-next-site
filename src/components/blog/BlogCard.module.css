@@ -1,0 +1,10 @@
+@reference "tailwindcss";
+
+.blogentry-card {
+  @apply p-3 w-full z-10 border border-gray-700 hover:border-blue-600 rounded-lg;
+}
+
+
+.blogentry-card a {
+  @apply text-[var(--color-foreground)] no-underline;
+}
