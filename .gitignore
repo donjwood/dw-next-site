@@ -18,6 +18,9 @@
 /out/
 
 # production
+
+# local env files
+.env*.local
 /build
 
 # misc
