@@ -9,7 +9,7 @@
 }
 
 .navbar-inner a {
-  @apply text-[var(--color-header-footer-foreground)] no-underline;
+  @apply text-[var(--color-header-footer-foreground)] no-underline hover:underline;
 }
 
 .nav-header {
@@ -41,5 +41,5 @@
 }
 
 .mobile-dropdown-inner a {
-  @apply block;;
+  @apply block text-[var(--color-header-footer-foreground)] no-underline hover:underline;
 }

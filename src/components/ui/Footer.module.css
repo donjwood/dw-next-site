@@ -5,5 +5,5 @@
 }
 
 .footer-inner {
-  @apply py-4 text-center;
+  @apply text-center;
 }

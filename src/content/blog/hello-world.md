@@ -4,7 +4,7 @@ date: '2025-09-05'
 description: 'My first blog post'
 ---
 
-# Hello World
+# Welcome!
 
 This is my first blog post! Welcome to my blog.
 

@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { BlogPost } from "@/lib/blog";
 import Link from "next/link";
 
@@ -8,22 +9,21 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ blogEntry }: BlogCardProps) {
-
-  const formattedDate = blogEntry.date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
+  const formattedDate = blogEntry.date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 
   return (
-    <article className={styles["blogentry-card"]}>
-      <Link href={`/blog/${blogEntry.slug}`} className="block">
-        <div className="text-center">
-        <h2>{blogEntry.title}</h2>
+    <div className={clsx("card", styles["blogentry-card"])}>
+      <Link href={`/blog/${blogEntry.slug}`}>
+        <div className="card-body">
+          <h2 className="card-title">{blogEntry.title}</h2>
+          <div>{formattedDate}</div>
+          <div>{blogEntry.description}</div>
         </div>
-        <div className="text-center">{formattedDate}</div>
-        <div>{blogEntry.description}</div>
       </Link>
-    </article>
+    </div>
   );
 }
